@@ -63,6 +63,7 @@ lianxisi/
 ### 📝 核心功能
 - **用户管理**：用户注册、登录、信息管理
   - 邮箱验证码登录（自动注册）
+  - 短信验证码登录（自动注册）
   - 账号密码登录
   - 自动分配6位学号（从000001开始）
   - 个人信息编辑
@@ -164,6 +165,8 @@ npm run dev
 |------|------|------|
 | POST | `/api/auth/send-code` | 发送邮箱验证码 |
 | POST | `/api/auth/login-email` | 邮箱验证码登录 |
+| POST | `/api/auth/send-sms` | 发送短信验证码 |
+| POST | `/api/auth/login-sms` | 短信验证码登录 |
 | POST | `/api/auth/login-account` | 账号密码登录 |
 | GET | `/api/auth/current-user` | 获取当前用户信息 |
 | PUT | `/api/auth/update-profile` | 更新用户信息 |
@@ -233,6 +236,16 @@ minio:
   password: minioadmin
 ```
 
+### 短信服务配置（阿里云）
+```yaml
+sms:
+  aliyun:
+    access-key-id: your-access-key-id
+    access-key-secret: your-access-key-secret
+    sign-name: 智能学习平台
+    template-code: SMS_123456789
+```
+
 ## 📄 数据库初始化
 
 数据库初始化脚本：
@@ -243,6 +256,7 @@ d:/1/lianxisi/exam_system_setup.sql
 在 MySQL 中执行该脚本以创建必要的表：
 - `denglu` - 用户登录信息表
 - `email_verification` - 邮箱验证码表
+- `sms_operation_log` - 短信操作日志表（用于风控审计回溯）
 
 ## 📁 项目目录说明
 
