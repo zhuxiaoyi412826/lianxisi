@@ -1,0 +1,12 @@
+1.启动MySQL 
+net start mysql
+2.启动Redis 
+redis-server
+3.启动前端
+npm run dev    
+   http://localhost:3001/
+4.启动后端 
+mvn spring-boot:run
+http://localhost:8080
+5.kinf4j访问
+http://localhost:8080/swagger-ui/index.html
