@@ -157,7 +157,7 @@ npm run dev
 | 视频 | `/api/video` | 视频管理 |
 | 统计 | `/api/stats` | 数据统计 |
 | 文件 | `/api/file` | 文件上传 |
-| 后台用户 | `/api/admin/user` | 后台用户管理 |
+| 后台用户 | `/api/admin/user` | 后台用户管理 |11
 
 ### 用户认证接口
 
